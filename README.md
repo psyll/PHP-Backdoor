@@ -29,8 +29,8 @@ The application is built in single php file. The size of the `dist` file is less
 
 ## Installation
 
-- [`Download`](https://github.com/psyll/PHP-Backdoor/archive/master.zip) **dist/backdoor.php** file
-- `Upload` **backdoor.php** file to your server
+- [`Download`](https://github.com/psyll/PHP-Backdoor/releases) latest release 
+- `Upload` **dist/backdoor.php** file to your server
 - `Run` script by url **[your domain]/backdoor.php**
 - `Join it`
 
