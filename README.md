@@ -42,8 +42,8 @@ The application is built in single php file. The size of the `dist` file is less
 
 ## Authors
 
-- `Jarek Szulc` <jarek@g3ck.com>
-- `G3ck Dev Team` <dev@g3ck.com>
+- `Jarek Szulc` <jarek@psyll.com>
+- `Psyll.com` <info@psyll.com>
 
 ##  &#9760; Use with caution
 
@@ -51,10 +51,10 @@ This script represents a security risk for the server. Do not upload it on a ser
 
 ## Changelog
 
-[View changelog](https://github.com/g3ck/PHP-Backdoor/blob/master/CHANGELOG.md)
+[View changelog](https://github.com/psyll/PHP-Backdoor/blob/master/CHANGELOG.md)
 
 ## License
 
 Licensed under the `MIT License`
 
-[View license](https://github.com/g3ck/PHP-Backdoor/blob/master/LICENSE)
+[View license](https://github.com/psyll/PHP-Backdoor/blob/master/LICENSE)
