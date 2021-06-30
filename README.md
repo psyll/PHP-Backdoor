@@ -14,22 +14,20 @@ Github Pages: [https://psyll.github.io/PHP-Backdoor/](https://psyll.github.io/PH
   * [Installation](#installation)
   * [Authors](#authors)
   * [&#9760; Use with caution](#-use-with-caution)
-  * [Screenshot](#screenshot)
   * [Changelog](#changelog)
   * [License](#license)
 
 ## Single file built
 
-The application is built in single php file. The size of the `dist` file is less than `~5 KB`
+The application is built in single php file. The size of the terminal file is less than `~10 KB`
 
 ## Files
 
-- `dits/backdoor.php` - Minimized distribution file
-- `src/backdoor.php` - Source file
+- `dist/backdoor.php` - Distribution file
 
 ## Installation
 
-- [`Download`](https://github.com/psyll/PHP-Backdoor/releases) latest release 
+- [`Download`](https://github.com/psyll/PHP-Backdoor/releases) latest release
 - `Upload` **dist/backdoor.php** file to your server
 - `Run` script by url **[your domain]/backdoor.php**
 - `Join it`

