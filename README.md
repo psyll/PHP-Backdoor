@@ -49,7 +49,7 @@ The application is built in single php file. The size of the terminal file is le
 ## Authors
 
 - `Jarek Szulc` <jarek@psyll.com>
-- `Psyll.com` <info@psyll.com>
+- `Psyll.com` <dev@psyll.com>
 
 ##  &#9760; Use with caution
 
