@@ -4,7 +4,7 @@
 	█▀▀ ▄█ ░█░ █▄▄ █▄▄ ▄ █▄▄ █▄█ █░▀░█
 	Project: PHP Backdoor
 	Description: Web-based application that allows to execute terminal commands on a server directly from a browser
-	Authors: Jarek <jarek@psyll.com>, Psyll.com Dev Team <dev@g3ck.com>
+	Authors: Jarek <jarek@psyll.com>, Psyll.com Dev Team <dev@psyll.com>
 	Homepage: https://psyll.github.io/PHP-Backdoor/
 	License: MIT
 */
