@@ -1,4 +1,4 @@
-# PHP Backdoor v3
+# PHP Backdoor
 
 ![PHP Backdoor](assets/img/header.png "PHP Backdoor")
 ![PHP Backdoor](assets/img/screenshot.png "PHP Backdoor")
