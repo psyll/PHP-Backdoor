@@ -3,34 +3,40 @@
 ![PHP Backdoor](assets/img/header.png "PHP Backdoor")
 ![PHP Backdoor](assets/img/screenshot.png "PHP Backdoor")
 
-[![License](https://badgen.net/badge/license/POCL)](https://psyll.com/license/pocl-psyll-public-code-license)
-![Repo Size](https://img.shields.io/github/repo-size/psyll/PHP-Backdoor)
-![Code Size](https://img.shields.io/github/languages/code-size/psyll/PHP-Backdoor)
-![Last commit](https://img.shields.io/github/last-commit/psyll/PHP-Backdoor)
-![Open issues](https://img.shields.io/github/issues-raw/psyll/PHP-Backdoor)
-[![CodeFactor](https://www.codefactor.io/repository/github/psyll/PHP-Backdoor/badge?s=ae31d6f3226bdf7bbf736f7337658a3f3d6a7fbd)](https://www.codefactor.io/repository/github/psyll/)
 
-PHP Backdoor is a web-based application that allows to execute terminal commands on a server directly from a browser.
 
-Github Pages: [https://psyll.github.io/PHP-Backdoor/](https://psyll.github.io/PHP-Backdoor/)
+<p align="center">
+	<a href="https://github.com/psyll/Noty-JS/blob/master/LICENSE">
+		<img src="https://badgen.net/badge/license/mit" alt="Display">
+	</a>
+	<img src="https://img.shields.io/github/repo-size/psyll/PHP-Backdoor" alt="Repo Size">
+	<img src="https://img.shields.io/github/languages/code-size/psyll/PHP-Backdoor" alt="Code Size">
+	<img src="https://img.shields.io/github/last-commit/psyll/PHP-Backdoor" alt="Last commit">
+	<img src="https://img.shields.io/github/repo-size/psyll/PHP-Backdoor" alt="Repo Size">
+	<img src="https://img.shields.io/github/issues-raw/psyll/PHP-Backdoor" alt="Open issues">
+
+</p>
+
+
+## Projects links
+
+- Github Repistory: [https://github.com/psyll/PHP-Backdoor/](https://github.com/psyll/PHP-Backdoor)
+- Github Pages: [https://psyll.github.io/PHP-Backdoor/](https://psyll.github.io/PHP-Backdoor)
+- Homepage: [https://psyll.com/en/php-backdoor](https://psyll.com/en/php-backdoor)
 
 ## Table of contents
 
-  * [Single file built ](#single-file-built)
-  * [Files](#files)
+  * [Introduction](#introduction)
   * [Installation](#installation)
+  * [Additional commands](#additional-commands)
   * [Authors](#authors)
   * [&#9760; Use with caution](#-use-with-caution)
   * [Changelog](#changelog)
   * [License](#license)
 
-## Single file built
+## Introduction
 
-The application is built in single php file. The size of the terminal file is less than `~10 KB`
-
-## Files
-
-- `dist/backdoor.php` - Distribution file
+PHP Backdoor is a web-based application that allows to execute terminal commands on a server directly from a browser. The application is built in single php file. The size of the terminal file is less than `~10 KB`
 
 ## Installation
 
