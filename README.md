@@ -12,7 +12,6 @@
 	<img src="https://img.shields.io/github/repo-size/psyll/PHP-Backdoor" alt="Repo Size">
 	<img src="https://img.shields.io/github/languages/code-size/psyll/PHP-Backdoor" alt="Code Size">
 	<img src="https://img.shields.io/github/last-commit/psyll/PHP-Backdoor" alt="Last commit">
-	<img src="https://img.shields.io/github/repo-size/psyll/PHP-Backdoor" alt="Repo Size">
 	<img src="https://img.shields.io/github/issues-raw/psyll/PHP-Backdoor" alt="Open issues">
 
 </p>
