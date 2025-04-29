@@ -17,12 +17,6 @@
 </p>
 
 
-## Projects links
-
-- Github Repistory: [https://github.com/psyll/PHP-Backdoor/](https://github.com/psyll/PHP-Backdoor)
-- Github Pages: [https://psyll.github.io/PHP-Backdoor/](https://psyll.github.io/PHP-Backdoor)
-- Homepage: [https://psyll.com/en/php-backdoor](https://psyll.com/en/php-backdoor)
-
 ## Table of contents
 
   * [Introduction](#introduction)
